@@ -18,7 +18,7 @@ const Information = () => {
             açık hale gelme durumu olarak tanımlanmaktadır. Aynı zamanda akıl
             değerinin,{" "}
             <Link
-              href="/info"
+              href="/EbcedHesabiNedir"
               className="text-primary font-bold underline underline-offset-2"
             >
               MBTI
@@ -39,7 +39,7 @@ const Information = () => {
             <br />
             Fikir değerinin,{" "}
             <Link
-              href="/info"
+              href="/EbcedHesabiNedir"
               className="text-primary font-bold underline underline-offset-2"
             >
               MBTI

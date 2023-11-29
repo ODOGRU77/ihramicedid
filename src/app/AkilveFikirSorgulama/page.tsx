@@ -1,5 +1,12 @@
 import Information from "@/components/form/Information";
 import NameForm from "@/components/form/NameForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Akıl ve Fikir Hesabı Sayfası",
+  description:
+    "Anne, baba ve çocuk isimlerinin ebced hesapları ile akıl ve fikir sorgulaması ",
+};
 
 const Page = () => {
   return (
@@ -14,8 +21,8 @@ const Page = () => {
         />
       </div>
       <div>
-        <div className="flex w-full min-h-screen sm:container items-center justify-center">
-          <div className="flex flex-col  md:flex-row p-2 sm:pt-6 md:p-6 gap-5">
+        <div className="flex w-full min-h-screen sm:container mt-2 sm:mt-0 sm:items-center justify-center">
+          <div className="flex flex-col md:flex-row  p-2 sm:pt-6 md:p-6 gap-5">
             <div className="md:basis-1/2 flex justify-center p-3 sm:p-6 border-2 bg-white/25 border-zinc-300 rounded-xl shadow-lg">
               <NameForm />
             </div>

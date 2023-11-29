@@ -1,6 +1,3 @@
-import React from "react";
-import NameFormWithReactHookFormWithZod from "./NameFormWithReactHookFormWithZod";
-
 const CalculationCard = () => {
   return (
     <div className="flex flex-col text-2xl border-2 scale-95 md:w-lg sm:w-xl border-zinc-200 rounded-xl shadow-lg mt-2">

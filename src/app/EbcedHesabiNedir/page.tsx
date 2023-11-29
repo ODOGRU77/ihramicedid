@@ -1,6 +1,11 @@
-import Information from "@/components/form/Information";
-import NameForm from "@/components/form/NameForm";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Ebced Hesabı Nedir",
+  description:
+    "Ebced Nedir, Ebced hesabının tarihçesi, (MBTI) Myers-Briggs Type Indicator Myers-Briggs Tip Göstergesi,   ",
+};
 
 const Page = () => {
   return (

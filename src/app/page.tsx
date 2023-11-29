@@ -3,11 +3,18 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Akıl ve Fikir Sorgulama",
+  description:
+    "Kişiler için, isimlerin ebced hesabı ile akıl ve fikir sorgulaması",
+};
 
 export default function Home() {
   return (
     <>
-      <MaxWidthWrapper className="mb-12 mt-28 sm:mt-10 flex flex-col items-center justify-center text-center">
+      <MaxWidthWrapper className="mb-12 mt-10 sm:mt-12 flex flex-col items-center justify-center text-center">
         <div className="mx-auto mb-8 flex max-w-fit items-center justify-center space-x-2 overflow-hidden rounded-full border border-gray-200 bg-white px-7 py-2 shadow-md backdrop-blur transition-all hover:border-gray-300 hover:bg-white/50">
           <p className="text-sm font-semibold text-gray-700">
             İhram-ı Cedid&apos;e hoşgeldiniz.
@@ -28,7 +35,7 @@ export default function Home() {
             size: "lg",
             className: "mt-8",
           })}
-          href="/hesaplama"
+          href="/AkilveFikirSorgulama"
         >
           Başlamak için <ArrowRight className=" h-5 w-5" />
         </Link>
@@ -101,19 +108,9 @@ export default function Home() {
           <li className="md:flex-1 ">
             <div className="flex flex-col space-y-2 border-l-4- border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
               <span className="text-sm font-bold text-[#6A040F]">Adım 1</span>
-              <span className="text-xl font-semibold">
-                Bir üyelik oluşturun
-              </span>
+              <span className="text-xl font-semibold">Bir isim seçin</span>
               <span className="mt-2 text-zinc-700">
-                Ücretsiz bir üyelik oluşturabilir ya da ücretli üyeliklerin
-                sunduğu ekstra özelliklerden faydalanmak için{" "}
-                <Link
-                  href="/pricing"
-                  className="text-[#6A040F] font-semibold underline underline-offset-2"
-                >
-                  tıklayabilirsiniz
-                </Link>
-                .
+                Çocuğunuz için bir isim belirleyin ve bir sonraki adıma geçin.
               </span>
             </div>
           </li>
@@ -121,7 +118,7 @@ export default function Home() {
             <div className="flex flex-col space-y-2 border-l-4- border-zinc-300 py-2 pl-4 md:border-l-0 md:border-t-2 md:pb-0 md:pl-0 md:pt-4">
               <span className="text-sm font-bold text-[#6A040F]">Adım 2</span>
               <span className="text-xl font-semibold">
-                Dilediğiniz isimle ilgili sorgulama yapın
+                Belirlediğiniz isimle ilgili sorgulama yapın
               </span>
               <span className="mt-2 text-zinc-700">
                 Anne, baba ve çocuğun isimlerini girerek akıl ve fikir

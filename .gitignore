@@ -14,7 +14,8 @@
 
 # production
 /build
-
+.next/static/chunks
+.next
 # misc
 .DS_Store
 *.pem

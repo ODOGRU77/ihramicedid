@@ -9,7 +9,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
-export default function NameFormWithReactHookFormWithZod() {
+export default function NameForm() {
   const {
     register,
     handleSubmit,
@@ -73,7 +73,7 @@ export default function NameFormWithReactHookFormWithZod() {
                 <input
                   {...register("motherName")}
                   autoFocus
-                  placeholder="Annenin adını yazınız..."
+                  placeholder="Annenin ismini yazınız..."
                   lang="tr"
                   className="appearance-none w-full text-xl placeholder:ml-5 pl-5 -mr-5 placeholder:text-center focus:outline-none placeholder:text-neutral-700 placeholder:italic placeholder:text-lg p-1 ring-1 bg-white/25  ring-neutral-600 focus:ring-2 focus:ring-[#415A77] bg-white rounded-full"
                   type="text"
@@ -98,7 +98,7 @@ export default function NameFormWithReactHookFormWithZod() {
               <div className="">
                 <input
                   {...register("fatherName")}
-                  placeholder="Babanın adını yazınız..."
+                  placeholder="Babanın ismini yazınız..."
                   className="appearance-none w-full text-xl placeholder:ml-5 pl-5 -mr-5 shadow-xl placeholder:text-center focus:outline-none placeholder:text-neutral-700 placeholder:italic placeholder:text-lg p-1 ring-1 bg-white/25  ring-neutral-600 focus:ring-2 focus:ring-[#415A77] bg-white rounded-full"
                   type="text"
                 />
@@ -122,7 +122,7 @@ export default function NameFormWithReactHookFormWithZod() {
               <div className="">
                 <input
                   {...register("kidName")}
-                  placeholder="Çocuğun adını yazınız..."
+                  placeholder="Çocuğun ismini yazınız..."
                   className="appearance-none w-full text-xl placeholder:ml-5 pl-5 -mr-5 placeholder:text-center focus:outline-none placeholder:text-neutral-700 placeholder:italic placeholder:text-lg p-1 ring-1 bg-white/25  ring-neutral-600 focus:ring-2 focus:ring-[#415A77] bg-white rounded-full"
                   type="text"
                 />
@@ -143,32 +143,6 @@ export default function NameFormWithReactHookFormWithZod() {
       </div>
 
       {veriler && sonuc && (
-        // <div className="border-4 max-w-sm md:max-w-xl border-indigo-300 rounded-[20px] mt-3 p-2 ">
-        //   <div className="flex capitalize font-medium   flex-col gap-1 w-full pl-2 pr-2  rounded-[20px] w-max-lg">
-        //     <p>
-        //       Annenin Adı : {veriler.motherName} ; Ebced Değeri:{" "}
-        //       {sonuc[0].motherPuanTotal} ; Arapça Yazılışı:{" "}
-        //       {sonuc[0].motherArabicTotal}
-        //     </p>
-        //   </div>
-        //   <div className="flex capitalize font-medium  flex-col gap-1 mt-1 w-full pl-2 pr-2 rounded-[20px] w-max-lg">
-        //     <p>
-        //       Babanın Adı: {veriler.fatherName} ; Ebced Değeri:{" "}
-        //       {sonuc[0].fatherPuanTotal} ; Arapça Yazılışı:{" "}
-        //       {sonuc[0].fatherArabicTotal}
-        //     </p>
-        //   </div>
-        //   <div className="flex capitalize font-medium  flex-col gap-1 mt-1 w-full pl-2 pr-2 rounded-[20px]">
-        //     <p>
-        //       Çocuğun Adı: {veriler.kidName} ; Ebced Değeri:{" "}
-        //       {sonuc[0].kidPuanTotal} ; Arapça Yazılışı:{" "}
-        //       {sonuc[0].kidArabicTotal}
-        //     </p>
-        //     <p>Akıl : {sonuc[0].akil} </p>
-        //     <p>Fikir : {sonuc[0].fikir} </p>
-        //     <p>Burç : {sonuc[0].burcAy} </p>
-        //   </div>
-        // </div>
         <div className="grid grid-flow-row text-xl border-2 border-zinc-300 rounded-xl shadow-lg gap-5 p-5 mt-5">
           <div className="items-center grid grid-flow-col text-2xl  gap-3 justify-stretch ">
             <div className="flex flex-col items-center border-2 p-1 rounded-xl shadow-lg border-zinc-300 justify-center">
@@ -190,19 +164,19 @@ export default function NameFormWithReactHookFormWithZod() {
           >
             <div lang="tr" className="">
               <div lang="tr">
-                <span className="font-light"> Anne İsim: </span>
+                <span className="font-light"> Annenin İsmi: </span>
                 <span lang="tr" className=" font-semibold">
                   {veriler.motherName.toLocaleUpperCase("tr")}
                 </span>
               </div>
               <div>
-                <span className="font-light"> Anne Arapça: </span>
+                <span className="font-light"> Annenin İsminin Arapçası: </span>
                 <span className="font-semibold">
                   {sonuc[0].motherArabicTotal}
                 </span>
               </div>
               <div>
-                <span className="font-light"> Anne Ebced: </span>
+                <span className="font-light"> Annenin İsminin Ebcedi: </span>
                 <span className="font-semibold">
                   {sonuc[0].motherPuanTotal}
                 </span>
@@ -210,19 +184,19 @@ export default function NameFormWithReactHookFormWithZod() {
             </div>
             <div lang="tr" className="">
               <div lang="tr">
-                <span className="font-light"> Baba İsim: </span>
+                <span className="font-light"> Babanın İsim: </span>
                 <span lang="tr" className="  font-semibold">
                   {veriler.fatherName.toLocaleUpperCase("tr")}
                 </span>
               </div>
               <div>
-                <span className="font-light"> Baba Arapça: </span>{" "}
+                <span className="font-light"> Babanın İsminin Arapçası: </span>{" "}
                 <span className="font-semibold">
                   {sonuc[0].fatherArabicTotal}
                 </span>
               </div>
               <div>
-                <span className="font-light"> Baba Ebced: </span>{" "}
+                <span className="font-light"> Baba İsminin Ebcedi: </span>{" "}
                 <span className="font-semibold">
                   {sonuc[0].fatherPuanTotal}
                 </span>
@@ -230,17 +204,17 @@ export default function NameFormWithReactHookFormWithZod() {
             </div>
             <div lang="tr" className="">
               <div lang="tr">
-                <span className="font-light"> Çocuk İsim: </span>
+                <span className="font-light"> Çocuğun İsmi: </span>
                 <span className=" font-semibold">
                   {veriler.kidName.toLocaleUpperCase("tr")}
                 </span>
               </div>
               <div>
-                <span className="font-light"> Çocuk Arapça: </span>{" "}
+                <span className="font-light"> Çocuğun İsminin Arapçası: </span>{" "}
                 <span className="font-semibold">{sonuc[0].kidArabicTotal}</span>
               </div>
               <div>
-                <span className="font-light"> Çocuk Ebced: </span>{" "}
+                <span className="font-light"> Çocuğun İsminin Ebcedi: </span>{" "}
                 <span className="font-semibold">{sonuc[0].kidPuanTotal}</span>
               </div>
             </div>

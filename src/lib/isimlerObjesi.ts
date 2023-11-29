@@ -7896,6 +7896,12 @@ let isimArray = [
     puan: "186",
     id: 1303,
   },
+  {
+    name: "Hüsnü",
+    arabic: "حسنی",
+    puan: "128",
+    id: 1304,
+  },
 ];
 
 // console.log(isimArray[0].name);
