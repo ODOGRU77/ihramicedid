@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Provider from "@/components/Provider";
 // import Ayirma from "@/components/ui/isimler2";
 import { cn } from "@/lib/utils";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 // const poppins = Poppins({ subsets: ["latin"], weight: "400" });
@@ -23,9 +24,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr">
+      <head>
+        <Script
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9057336938141217"
+        />
+      </head>
       <body
         className={cn(
-          "  min-h-screen font-sans antialiased grainy",
+          "min-h-screen font-sans antialiased grainy",
           inter.className
         )}
       >
