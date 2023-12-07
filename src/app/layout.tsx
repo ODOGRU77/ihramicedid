@@ -12,6 +12,8 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 // const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MEASUREMENT_ID;
+
 export const metadata: Metadata = {
   title: "Ebced Hesabı",
   description: "Akıl ve Fikir değerlerinizi hemen öğrenin",
@@ -31,6 +33,18 @@ export default function RootLayout({
           crossOrigin="anonymous"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9057336938141217"
         />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${GA_MEASUREMENT_ID}');
+  `}
+        </Script>
       </head>
       <body
         className={cn(
