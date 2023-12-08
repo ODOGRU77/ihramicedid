@@ -28,12 +28,6 @@ export default function RootLayout({
     <html lang="tr">
       <head>
         <Script
-          id="adsbygoogle-init"
-          strategy="afterInteractive"
-          crossOrigin="anonymous"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9057336938141217"
-        />
-        <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
@@ -45,6 +39,12 @@ export default function RootLayout({
     gtag('config', '${GA_MEASUREMENT_ID}');
   `}
         </Script>
+        <Script
+          id="adsbygoogle-init"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9057336938141217"
+        />
       </head>
       <body
         className={cn(
