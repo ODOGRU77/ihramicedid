@@ -15,8 +15,6 @@ export function hesapla(motherName, fatherName, kidName) {
   const pattern =
     /(?:bi|bo|bur|bu|bül|ca|ce|ci|co|cu|çe|çi|de|dı|di|du|dü|fı|fe|fu|fir|gam|ge|gı|go|gö|gü|ha|he|hı|hü|ka|ke|kı|ki|ku|kud|le|ley|lı|li|lü|me|ne|nı|ni|nil|per|pi|re|rı|rım|ri|ru|rü|rüm|ruk|za|ze|zı|zü|sa|se|si|su|sü|sun|şa|şi|şit|te|tı|ti|tu|tü|vu|ve|vi|ye|yi)|./g;
 
-  // Use the match method to split the word and store it in an array
-
   // ANNE FOR DÖNGÜSÜ //
 
   const resultAnne = motherName.match(pattern);
