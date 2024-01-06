@@ -8094,6 +8094,30 @@ let isimArray = [
     puan: "367",
     id: 1336,
   },
+  {
+    name: "Devin",
+    arabic: "دوين",
+    puan: "70",
+    id: 1337,
+  },
+  {
+    name: "Sueda",
+    arabic: "سعدا",
+    puan: "135",
+    id: 1338,
+  },
+  {
+    name: "Noyan",
+    arabic: "نويان",
+    puan: "117",
+    id: 1339,
+  },
+  {
+    name: "Aygün",
+    arabic: "آی گون",
+    puan: "88",
+    id: 1340,
+  },
 ];
 
 // console.log(isimArray[0].name);
